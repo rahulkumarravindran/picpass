@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type=checkbox]{
+width: 150px;
+height: 150px;
+margin: 0; 
+padding: 0; 
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 20px;
+}
+
+span.psw {
+  float: left;
+  padding-top: 16px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; 
+}
+
+.pictureGrid{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin-left: 20px;
+  opacity: 1;
+}
+
+img{
+  width: 451px;
+  height: 455px;
+  position: absolute; 
+  margin-left: 140px;
+}
+
+
+</style>
+</head>
+<body>
+
+<center><h2>PICPASS</h2></center>
+  
+  <form class="modal-content animate" action="/SignUp" method="post">
+    <div class="container">
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+
+      <label for="psw"><b>Password</b></label>
+      <div>
+      <img src={{ user_image }} />
+      <div class="pictureGrid">
+         <label><input type="checkbox" id="img1" name="chk1" value="1" /></label>
+         <label><input type="checkbox"  id="img2" name="chk2" value="2" /></label>
+         <label><input type="checkbox"  id="img3" name="chk3" value="3" /></label>
+        </div>
+        <div class="pictureGrid">
+            <label><input type="checkbox"  id="img4"  name="chk4" value="4" /></label>
+            <label><input type="checkbox"  id="img5" name="chk5" value="5" /></label>
+            <label><input type="checkbox"  id="img6" name="chk6" value="6" /></label>
+           </div>
+           <div class="pictureGrid">
+              <label><input type="checkbox"  id="img7" name="chk7" value="7" /></label>
+              <label><input type="checkbox"  id="img8" name="chk8" value="8" /></label>
+              <label><input type="checkbox"  id="img9" name="chk9" value="9" /></label>
+             </div>
+            </div>
+      <button type="submit">Sign Up</button>
+    </div>
+  </form>
+</div>
+
+<script>
+</script>
+
+</body>
+</html>
